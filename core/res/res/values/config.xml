@@ -6049,4 +6049,8 @@
     <!-- Whether the lock screen is allowed to run its own live wallpaper,
          different from the home screen wallpaper. -->
     <bool name="config_independentLockscreenLiveWallpaper">false</bool>
+    
+    <!-- Time to give to the proximity sensor before toggling the flashlight with the
+         Power button. Set to -1 to disable the proximity sensor check -->
+    <integer name="config_torchProximityTimeout">300</integer>
 </resources>
