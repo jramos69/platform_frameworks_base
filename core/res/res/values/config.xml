@@ -6081,4 +6081,7 @@
     <!-- Time to give to the proximity sensor before toggling the flashlight with the
          Power button. Set to -1 to disable the proximity sensor check -->
     <integer name="config_torchProximityTimeout">300</integer>
+    
+    <!-- Enable face auth only when swiping security view -->
+    <java-symbol type="bool" name="config_faceAuthOnlyOnSecurityView" />
 </resources>
