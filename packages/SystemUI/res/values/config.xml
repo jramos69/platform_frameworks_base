@@ -69,10 +69,10 @@
     <integer translatable="false" name="config_search_panel_view_vibration_duration">20</integer>
 
     <!-- Show mic or phone affordance on Keyguard -->
-    <bool name="config_keyguardShowLeftAffordance">false</bool>
+    <bool name="config_keyguardShowLeftAffordance">true</bool>
 
     <!-- Show camera affordance on Keyguard -->
-    <bool name="config_keyguardShowCameraAffordance">false</bool>
+    <bool name="config_keyguardShowCameraAffordance">true</bool>
 
     <!-- The length of the vibration when the notification pops open. -->
     <integer name="one_finger_pop_duration_ms">10</integer>
@@ -180,7 +180,7 @@
     <string name="velocity_tracker_impl" translatable="false">platform</string>
 
     <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">false</bool>
+    <bool name="doze_display_state_supported">true</bool>
 
     <!-- Doze: does this device support STATE_DOZE_SUSPEND?  -->
     <bool name="doze_suspend_display_state_supported">false</bool>
@@ -245,10 +245,10 @@
                to brightness values; -1 means keeping the current brightness. -->
     <integer-array name="config_doze_brightness_sensor_to_brightness">
         <item>-1</item> <!-- 0: OFF -->
-        <item>2</item> <!-- 1: NIGHT -->
-        <item>5</item> <!-- 2: LOW -->
-        <item>27</item> <!-- 3: HIGH -->
-        <item>28</item> <!-- 4: SUN -->
+        <item>5</item> <!-- 1: NIGHT -->
+        <item>27</item> <!-- 2: LOW -->
+        <item>28</item> <!-- 3: HIGH -->
+        <item>35</item> <!-- 4: SUN -->
     </integer-array>
 
     <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
@@ -285,7 +285,7 @@
     <bool name="enable_safety_warning">true</bool>
 
     <!-- Whether to show operator name in the status bar -->
-    <bool name="config_showOperatorNameInStatusBar">false</bool>
+    <bool name="config_showOperatorNameInStatusBar">true</bool>
 
     <!-- Duration of the full carrier network change icon animation. -->
     <integer name="carrier_network_change_anim_time">3000</integer>
@@ -375,7 +375,7 @@
     <bool name="config_enableNotificationShadeDrag">true</bool>
 
     <!-- Whether to show activity indicators in the status bar -->
-    <bool name="config_showActivity">false</bool>
+    <bool name="config_showActivity">true</bool>
 
     <!-- Whether or not the button to clear all notifications will be shown. -->
     <bool name="config_enableNotificationsClearAll">true</bool>
@@ -385,7 +385,7 @@
     <bool name="config_showNotificationShelf">true</bool>
 
     <!-- Whether or not the notifications should always fade as they are dismissed. -->
-    <bool name="config_fadeNotificationsOnDismiss">false</bool>
+    <bool name="config_fadeNotificationsOnDismiss">true</bool>
 
     <!-- Whether or not the parent of the notification row itself is being translated when swiped or
          its children views. If true, then the contents are translated and vice versa. -->
@@ -393,10 +393,10 @@
 
     <!-- Whether or not the fade on the notification is based on the amount that it has been swiped
          off-screen. -->
-    <bool name="config_fadeDependingOnAmountSwiped">false</bool>
+    <bool name="config_fadeDependingOnAmountSwiped">true</bool>
 
     <!-- Whether or not to show the expand button at the end of the notification header. -->
-    <bool name="config_showNotificationExpandButtonAtEnd">false</bool>
+    <bool name="config_showNotificationExpandButtonAtEnd">true</bool>
 
     <!-- Whether or the notifications should be clipped to be reduced in height if it has been
          scrolled to the top of the screen. -->
@@ -435,7 +435,7 @@
 
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
-    <bool name="config_vibrateOnIconAnimation">false</bool>
+    <bool name="config_vibrateOnIconAnimation">true</bool>
 
     <!-- If true, enable the advance anti-falsing classifier on the lockscreen. On some devices it
          does not work well, particularly with noisy touchscreens. Note that disabling it may
