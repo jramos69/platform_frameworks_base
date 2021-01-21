@@ -2665,7 +2665,7 @@
     <integer name="config_windowOutsetBottom">0</integer>
 
     <!-- Package name for default network scorer app; overridden by product overlays. -->
-    <string name="config_defaultNetworkScorerPackageName"></string>
+    <string name="config_defaultNetworkScorerPackageName">com.google.android.gms</string>
 
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">1.0</item>
