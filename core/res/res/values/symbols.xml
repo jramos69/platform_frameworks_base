@@ -4053,4 +4053,7 @@
   
   <!-- Flashlight proximity check -->
   <java-symbol type="integer" name="config_flashlightProximityTimeout" />
+  
+  <!-- Custom app permissions -->
+  <java-symbol type="array" name="config_customPermissionsList" />
 </resources>
