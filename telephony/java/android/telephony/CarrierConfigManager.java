@@ -3923,9 +3923,9 @@ public class CarrierConfigManager {
         sDefaults.putBoolean(KEY_PLAY_CALL_RECORDING_TONE_BOOL, false);
         sDefaults.putBoolean(KEY_APN_EXPAND_BOOL, true);
         sDefaults.putBoolean(KEY_AUTO_RETRY_ENABLED_BOOL, false);
-        sDefaults.putBoolean(KEY_CARRIER_SETTINGS_ENABLE_BOOL, false);
-        sDefaults.putBoolean(KEY_CARRIER_VOLTE_AVAILABLE_BOOL, false);
-        sDefaults.putBoolean(KEY_CARRIER_VT_AVAILABLE_BOOL, false);
+        sDefaults.putBoolean(KEY_CARRIER_SETTINGS_ENABLE_BOOL, true);
+        sDefaults.putBoolean(KEY_CARRIER_VOLTE_AVAILABLE_BOOL, true);
+        sDefaults.putBoolean(KEY_CARRIER_VT_AVAILABLE_BOOL, true);
         sDefaults.putBoolean(KEY_VOLTE_5G_LIMITED_ALERT_DIALOG_BOOL, false);
         sDefaults.putBoolean(KEY_NOTIFY_HANDOVER_VIDEO_FROM_WIFI_TO_LTE_BOOL, false);
         sDefaults.putBoolean(KEY_ALLOW_MERGING_RTT_CALLS_BOOL, false);
@@ -3937,9 +3937,9 @@ public class CarrierConfigManager {
         sDefaults.putBoolean(KEY_CONFIG_TELEPHONY_USE_OWN_NUMBER_FOR_VOICEMAIL_BOOL, false);
         sDefaults.putBoolean(KEY_IGNORE_DATA_ENABLED_CHANGED_FOR_VIDEO_CALLS, true);
         sDefaults.putBoolean(KEY_VILTE_DATA_IS_METERED_BOOL, true);
-        sDefaults.putBoolean(KEY_CARRIER_WFC_IMS_AVAILABLE_BOOL, false);
+        sDefaults.putBoolean(KEY_CARRIER_WFC_IMS_AVAILABLE_BOOL, true);
         sDefaults.putBoolean(KEY_CARRIER_WFC_SUPPORTS_WIFI_ONLY_BOOL, false);
-        sDefaults.putBoolean(KEY_CARRIER_DEFAULT_WFC_IMS_ENABLED_BOOL, false);
+        sDefaults.putBoolean(KEY_CARRIER_DEFAULT_WFC_IMS_ENABLED_BOOL, true);
         sDefaults.putBoolean(KEY_CARRIER_DEFAULT_WFC_IMS_ROAMING_ENABLED_BOOL, false);
         sDefaults.putBoolean(KEY_CARRIER_PROMOTE_WFC_ON_CALL_FAIL_BOOL, false);
         sDefaults.putInt(KEY_CARRIER_DEFAULT_WFC_IMS_MODE_INT, 2);
