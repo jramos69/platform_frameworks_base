@@ -639,7 +639,7 @@
     <dimen name="qs_detail_icon_overlay_size">24dp</dimen>
 
     <dimen name="segmented_button_spacing">0dp</dimen>
-    <dimen name="borderless_button_radius">2dp</dimen>
+    <dimen name="borderless_button_radius">4dp</dimen>
 
     <dimen name="restricted_padlock_pading">4dp</dimen>
 
@@ -1158,7 +1158,7 @@
 
     <!-- The absolute side margins of quick settings -->
     <dimen name="quick_settings_bottom_margin_media">8dp</dimen>
-    <dimen name="rounded_corner_content_padding">0dp</dimen>
+    <dimen name="rounded_corner_content_padding">4dp</dimen>
     <dimen name="nav_content_padding">0dp</dimen>
     <dimen name="nav_quick_scrub_track_edge_padding">24dp</dimen>
     <dimen name="nav_quick_scrub_track_thickness">10dp</dimen>
