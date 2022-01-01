@@ -35,7 +35,7 @@ import javax.inject.Inject
 private const val TAG = "MediaArtworkProcessor"
 private const val COLOR_ALPHA = (255 * 0.5f).toInt()
 private const val BLUR_RADIUS = 10f
-private const val DOWNSAMPLE = 4
+private const val DOWNSAMPLE = 3
 
 @SysUISingleton
 class MediaArtworkProcessor @Inject constructor() {
