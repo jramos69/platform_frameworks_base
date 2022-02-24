@@ -308,7 +308,7 @@
     <bool name="config_keyguard_user_switch_opens_qs_details">false</bool>
 
     <!-- SystemUIFactory component -->
-    <string name="config_systemUIFactoryComponent" translatable="false">com.android.systemui.SystemUIFactory</string>
+    <string name="config_systemUIFactoryComponent" translatable="false">org.protonaosp.systemui.CustomSystemUIFactory</string>
 
     <!-- SystemUI Services: The classes of the stuff to start. -->
     <string-array name="config_systemUIServiceComponents" translatable="false">
@@ -504,6 +504,7 @@
     <!-- SystemUI Plugins that can be loaded on user builds. -->
     <string-array name="config_pluginWhitelist" translatable="false">
         <item>com.android.systemui</item>
+        <item>com.android.systemui.plugin.globalactions.wallet</item>
     </string-array>
 
     <integer name="ongoing_appops_dialog_max_apps">5</integer>
@@ -618,7 +619,7 @@
     <bool name="config_use_split_notification_shade">false</bool>
 
     <!-- Determines whether the shell features all run on another thread. -->
-    <bool name="config_enableShellMainThread">false</bool>
+    <bool name="config_enableShellMainThread">true</bool>
 
     <!-- Default udfps icon. Same path as ic_fingerprint.xml -->
     <string name="config_udfpsIcon" translatable="false">
