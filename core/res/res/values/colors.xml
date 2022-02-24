@@ -269,7 +269,7 @@
     <color name="system_accent1_500">#007FAC</color>
     <!-- Shade of the accent system color at 40% lightness.
      This value can be overlaid at runtime by OverlayManager RROs. -->
-    <color name="system_accent1_600">#00668B</color>
+    <color name="system_accent1_600">#7B008B</color>
     <!-- Shade of the accent system color at 30% lightness.
      This value can be overlaid at runtime by OverlayManager RROs. -->
     <color name="system_accent1_700">#004C69</color>
@@ -371,7 +371,7 @@
     <color name="system_neutral1_10">#FCFCFF</color>
     <!-- Shade of the neutral system color at 95% lightness.
      This value can be overlaid at runtime by OverlayManager RROs. -->
-    <color name="system_neutral1_50">#F0F0F3</color>
+    <color name="system_neutral1_50">#EBEBED</color>
     <!-- Shade of the neutral system color at 90% lightness.
      This value can be overlaid at runtime by OverlayManager RROs. -->
     <color name="system_neutral1_100">#E1E3E5</color>
