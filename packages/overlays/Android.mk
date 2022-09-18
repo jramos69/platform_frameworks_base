@@ -37,7 +37,6 @@ LOCAL_REQUIRED_MODULES := \
 	NavigationBarModeGesturalOverlayExtraWideBack \
 	TransparentNavigationBarOverlay \
 	NotesRoleEnabledOverlay \
-	OneHandedModeGesturalOverlay \
         NoCutoutOverlay \
 	preinstalled-packages-platform-overlays.xml
 
