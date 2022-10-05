@@ -1836,7 +1836,7 @@
          This setting is ignored if config_enableGeolocationTimeZoneDetection is false.
 
          AOSP does not configure a primary location time zone provider. -->
-    <bool name="config_enablePrimaryLocationTimeZoneProvider" translatable="false">false</bool>
+    <bool name="config_enablePrimaryLocationTimeZoneProvider" translatable="false">true</bool>
 
     <!-- The package hosting the primary location time zone provider.
          Only used when config_enableGeolocationTimeZoneDetection and
@@ -3142,7 +3142,7 @@
     <integer name="config_windowOutsetBottom">0</integer>
 
     <!-- Package name for default network scorer app; overridden by product overlays. -->
-    <string name="config_defaultNetworkScorerPackageName"></string>
+    <string name="config_defaultNetworkScorerPackageName">com.google.android.gms</string>
 
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
