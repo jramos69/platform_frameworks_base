@@ -1665,15 +1665,15 @@
     <string name="permdesc_mediaLocation">Allows the app to read locations from your media collection.</string>
 
     <!-- Name for an app setting that lets the user authenticate for that app using biometrics (e.g. fingerprint or face). [CHAR LIMIT=30] -->
-    <string name="biometric_app_setting_name">Use biometrics</string>
+    <string name="biometric_app_setting_name">Use face or fingerprint</string>
     <!-- Name for an app setting that lets the user authenticate for that app using biometrics (e.g. fingerprint or face) or their screen lock credential (i.e. PIN, pattern, or password). [CHAR LIMIT=70] -->
-    <string name="biometric_or_screen_lock_app_setting_name">Use biometrics or screen lock</string>
+    <string name="biometric_or_screen_lock_app_setting_name">Use face, fingerprint, or screen lock</string>
     <!-- Title shown when the system-provided biometric dialog is shown, asking the user to authenticate. [CHAR LIMIT=40] -->
     <string name="biometric_dialog_default_title">Verify it\u2019s you</string>
     <!-- Subtitle shown on the system-provided biometric dialog, asking the user to authenticate with a biometric (e.g. fingerprint or face). [CHAR LIMIT=70] -->
-    <string name="biometric_dialog_default_subtitle">Use your biometric to continue</string>
+    <string name="biometric_dialog_default_subtitle">Use your face or fingerprint to continue</string>
     <!-- Subtitle shown on the system-provided biometric dialog, asking the user to authenticate with a biometric (e.g. fingerprint or face) or their screen lock credential (i.e. PIN, pattern, or password). [CHAR LIMIT=90] -->
-    <string name="biometric_or_screen_lock_dialog_default_subtitle">Use your biometric or screen lock to continue</string>
+    <string name="biometric_or_screen_lock_dialog_default_subtitle">Use your face, fingerprint, or screen lock to continue</string>
 
     <!-- Message shown when biometric hardware is not available [CHAR LIMIT=50] -->
     <string name="biometric_error_hw_unavailable">Biometric hardware unavailable</string>
@@ -1778,7 +1778,7 @@
     <!-- Notification title shown when the system requires the user to re-enroll their face. [CHAR LIMIT=NONE] -->
     <string name="face_recalibrate_notification_title">Issue with Face Unlock</string>
     <!-- Notification content shown when the system requires the user to re-enroll their face. [CHAR LIMIT=NONE] -->
-    <string name="face_recalibrate_notification_content">Tap to delete your face model, then add your face again</string>
+    <string name="face_recalibrate_notification_content">Face unlock may not work until you re-enroll</string>
     <!-- Title of a notification that directs the user to set up Face Unlock by enrolling their face. [CHAR LIMIT=NONE] -->
     <string name="face_setup_notification_title">Set up Face Unlock</string>
     <!-- Contents of a notification that directs the user to set up face unlock by enrolling their face. [CHAR LIMIT=NONE] -->
@@ -1880,6 +1880,11 @@
 
     <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
     <string-array name="face_error_vendor">
+      <item>"Certificate expired"</item>
+      <item>"Sensor temporarily disabled"</item>
+      <item>"Calibration error"</item>
+      <item>"Face unlock unavailable. Phone is too hot."</item>
+      <item>"Face unlock needs to be set up again"</item>
     </string-array>
     <!-- Default error message to use when face_error_vendor does not contain a message. [CHAR LIMIT=NONE] -->
     <string name="face_error_vendor_unknown">Something went wrong. Try again.</string>

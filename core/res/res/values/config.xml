@@ -246,7 +246,7 @@
          dozing).  This should be enabled if you have such services and expect apps to
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
-    <bool name="config_enableAutoPowerModes">false</bool>
+    <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Whether (if true) this is a kind of device that can be moved around (eg. phone/laptop),
          or (if false) something for which movement is either not measurable or should not count
@@ -3495,7 +3495,7 @@
     <integer name="config_fingerprintMaxTemplatesPerUser">5</integer>
 
     <!-- Specify if the fingerprint hardware support gestures-->
-    <bool name="config_fingerprintSupportsGestures">false</bool>
+    <bool name="config_fingerprintSupportsGestures">true</bool>
 
     <!-- This config is used to force VoiceInteractionService to start on certain low ram devices.
          It declares the package name of VoiceInteractionService that should be started. -->
@@ -3881,7 +3881,7 @@
     <integer name="config_keepPreloadsMinDays">7</integer>
 
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">false</bool>
+    <bool name="config_useRoundIcon">true</bool>
 
     <!-- Flag indicating whether the assist disclosure can be disabled using
          ASSIST_DISCLOSURE_ENABLED. -->
@@ -3979,7 +3979,7 @@
     <bool name="config_allow3rdPartyAppOnInternal">true</bool>
 
     <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
-    <string name="config_icon_mask" translatable="false">"M50,0L92,0C96.42,0 100,4.58 100 8L100,92C100, 96.42 96.42 100 92 100L8 100C4.58, 100 0 96.42 0 92L0 8 C 0 4.42 4.42 0 8 0L50 0Z"</string>
+    <string name="config_icon_mask" translatable="false">M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z</string>
 
     <!-- The component name, flattened to a string, for the default accessibility service to be
          enabled by the accessibility shortcut. This service must be trusted, as it can be activated
@@ -4084,10 +4084,10 @@
 
     <!-- Intent extra key for the caller's package name while requesting ambient context consent.
      -->
-    <string translatable="false" name="config_ambientContextPackageNameExtraKey"></string>
+    <string translatable="false" name="config_ambientContextPackageNameExtraKey">PACKAGE_NAME</string>
 
     <!-- Intent extra key for the event code int array while requesting ambient context consent. -->
-    <string translatable="false" name="config_ambientContextEventArrayExtraKey"></string>
+    <string translatable="false" name="config_ambientContextEventArrayExtraKey">EVENT_ARRAY</string>
 
     <!-- The component name for the system-wide captions manager service.
          This service must be trusted, as the system binds to it and keeps it running.
@@ -4098,7 +4098,7 @@
     <!-- Indicates whether the system wide captions service should also support
          call captioning.
     -->
-    <bool name="config_systemCaptionsServiceCallsEnabled" translatable="false"></bool>
+    <bool name="config_systemCaptionsServiceCallsEnabled" translatable="false">true</bool>
 
     <!-- The package name for the incident report approver app.
         This app is usually PermissionController or an app that replaces it.  When
@@ -4286,9 +4286,9 @@
     <integer translatable="false" name="config_storageManagerDaystoRetainDefault">90</integer>
 
     <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
-    <string name="config_headlineFontFamily" translatable="false"></string>
+    <string name="config_headlineFontFamily" translatable="false">google-sans</string>
     <!-- Allows setting custom fontFeatureSettings on specific text. -->
-    <string name="config_headlineFontFeatureSettings" translatable="false"></string>
+    <string name="config_headlineFontFeatureSettings" translatable="false">ss03</string>
 
     <!-- An array of packages that need to be treated as type system in battery settings -->
     <string-array translatable="false" name="config_batteryPackageTypeSystem">
@@ -4354,7 +4354,7 @@
     <string name="config_mediaProjectionPermissionDialogComponent" translatable="false">com.android.systemui/com.android.systemui.media.MediaProjectionPermissionActivity</string>
 
     <!-- Corner radius of system dialogs -->
-    <dimen name="config_dialogCornerRadius">2dp</dimen>
+    <dimen name="config_dialogCornerRadius">28.000000dp</dimen>
     <!-- Corner radius of system buttons -->
     <dimen name="config_buttonCornerRadius">@dimen/control_corner_material</dimen>
     <!-- Corner radius for bottom sheet system dialogs -->
@@ -4364,11 +4364,11 @@
     <!-- Controls whether system buttons use all caps for text -->
     <bool name="config_buttonTextAllCaps">true</bool>
     <!-- Name of the font family used for system surfaces where the font should use medium weight -->
-    <string name="config_headlineFontFamilyMedium" translateable="false">@string/font_family_button_material</string>
+    <string name="config_headlineFontFamilyMedium" translateable="false">google-sans-medium</string>
     <!-- Name of a font family to use for body text. -->
-    <string name="config_bodyFontFamily" translatable="false">sans-serif</string>
+    <string name="config_bodyFontFamily" translatable="false">google-sans-text</string>
     <!-- Name of a font family to use for medium body text. -->
-    <string name="config_bodyFontFamilyMedium" translatable="false">sans-serif-medium</string>
+    <string name="config_bodyFontFamilyMedium" translatable="false">google-sans-text-medium</string>
 
     <!-- Size of icon shown beside a preference locked by admin -->
     <dimen name="config_restrictedIconSize">@dimen/restricted_icon_size_material</dimen>
@@ -4833,6 +4833,7 @@
          used to hide messages that may be too chatty or messages that the user can't do much about.
          Entries are defined in android.hardware.biometrics.face@1.0 types.hal -->
     <integer-array name="config_face_acquire_enroll_ignorelist" translatable="false" >
+      <item>13</item>
     </integer-array>
     <!-- Same as the above, but are defined by vendorCodes -->
     <integer-array name="config_face_acquire_vendor_enroll_ignorelist" translatable="false" >
@@ -4846,6 +4847,16 @@
     </integer-array>
     <!-- Same as the above, but are defined by vendorCodes -->
     <integer-array name="config_face_acquire_vendor_keyguard_ignorelist" translatable="false" >
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>11</item>
+      <item>12</item>
+      <item>14</item>
+      <item>15</item>
+      <item>19</item>
     </integer-array>
 
     <!-- Messages that should not be shown to the user during face authentication, on
@@ -4853,7 +4864,25 @@
          that the user can't do much about. Entries are defined in
          android.hardware.biometrics.face@1.0 types.hal -->
     <integer-array name="config_face_acquire_biometricprompt_ignorelist" translatable="false" >
-    </integer-array>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+      <item>7</item>
+      <item>8</item>
+      <item>9</item>
+      <item>11</item>
+      <item>12</item>
+      <item>13</item>
+      <item>14</item>
+      <item>15</item>
+      <item>16</item>
+      <item>17</item>
+      <item>18</item>
+      <item>19</item>
+   </integer-array>
     <!-- Same as the above, but are defined by vendorCodes -->
     <integer-array name="config_face_acquire_vendor_biometricprompt_ignorelist" translatable="false" >
     </integer-array>
@@ -5447,9 +5476,9 @@
     <string name="config_systemCompanionDeviceProvider" translatable="false"></string>
 
     <!-- Whether this device is supporting the software microphone toggle -->
-    <bool name="config_supportsMicToggle">false</bool>
+    <bool name="config_supportsMicToggle">true</bool>
     <!-- Whether this device is supporting the camera toggle -->
-    <bool name="config_supportsCamToggle">false</bool>
+    <bool name="config_supportsCamToggle">true</bool>
     <!-- Whether this device is supporting the hardware microphone toggle -->
     <bool name="config_supportsHardwareMicToggle">false</bool>
     <!-- Whether this device is supporting the hardware camera toggle -->
@@ -5665,7 +5694,7 @@
     <bool name="config_safetyProtectionEnabled">false</bool>
 
     <!-- Flag indicating if help links for Settings app should be enabled. -->
-    <bool name="config_settingsHelpLinksEnabled">false</bool>
+    <bool name="config_settingsHelpLinksEnabled">true</bool>
 
     <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
     <bool name="config_enableQrCodeScannerOnLockScreen">false</bool>
@@ -5800,7 +5829,7 @@
     <item name="ic_safety_protection" type="drawable">@null</item>
 
     <!-- Display text for safety protection to be overlaid. This is translatable -->
-    <string name="safety_protection_display_text"></string>
+    <string name="safety_protection_display_text">&lt;font face="google-sans"&gt;Protected by &lt;/font&gt;&lt;font face="google-sans-medium"&gt;Android&lt;/font&gt;</string>
 
     <!-- End safety protection resources to be overlaid -->
 
