@@ -28,7 +28,9 @@ LOCAL_REQUIRED_MODULES := \
 	DisplayCutoutEmulationTallOverlay \
 	DisplayCutoutEmulationWaterfallOverlay \
 	DisplayCutoutEmulationWideOverlay \
+	FontHarmonySansOverlay \
 	FontNotoSerifSourceOverlay \
+	FontSamsungOneSourceOverlay \
 	NavigationBarMode3ButtonOverlay \
 	NavigationBarMode2ButtonOverlay \
 	NavigationBarModeGesturalOverlay \
