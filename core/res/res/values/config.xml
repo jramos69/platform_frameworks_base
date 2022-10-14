@@ -2958,7 +2958,7 @@
 
     <!-- System settings intelligence package name -->
     <string name="config_systemSettingsIntelligence" translatable="false">
-        com.android.settings.intelligence
+        com.google.android.settings.intelligence
     </string>
 
     <!-- System bluetooth stack package name -->
@@ -5033,14 +5033,14 @@
 
     <!-- Component name that accepts ACTION_SEND intents for nearby (proximity-based) sharing.
          Used by ChooserActivity. -->
-    <string translatable="false" name="config_defaultNearbySharingComponent"></string>
+    <string translatable="false" name="config_defaultNearbySharingComponent">com.google.android.gms/com.google.android.gms.nearby.sharing.ShareSheetActivity</string>
 
     <!-- URI used for Nearby Share SliceProvider scanning. -->
     <string translatable="false" name="config_defaultNearbySharingSliceUri"></string>
 
     <!-- Component name that accepts settings intents for saved devices.
              Used by FastPairSettingsFragment. -->
-    <string translatable="false" name="config_defaultNearbyFastPairSettingsDevicesComponent"></string>
+    <string translatable="false" name="config_defaultNearbyFastPairSettingsDevicesComponent">com.google.android.gms/com.google.android.gms.nearby.discovery.devices.SavedDevicesSettingsActivity</string>
 
     <!-- Boolean indicating whether frameworks needs to reset cell broadcast geo-fencing
          check after reboot or airplane mode toggling -->
