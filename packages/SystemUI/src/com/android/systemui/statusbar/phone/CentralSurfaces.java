@@ -195,6 +195,8 @@ public interface CentralSurfaces extends Dumpable, ActivityStarter, LifecycleOwn
     void collapsePanelWithDuration(int duration);
 
     void togglePanel();
+    
+    void toggleCameraFlash();
 
     void start();
 
