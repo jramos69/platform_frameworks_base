@@ -105,7 +105,7 @@
     <java-symbol type="string" name="config_wlan_network_service_class" />
 
     <!-- Telephony qualified networks service package name to bind to by default. -->
-    <string name="config_qualified_networks_service_package" translatable="false"></string>
+    <string name="config_qualified_networks_service_package" translatable="false">com.android.qns</string>
     <java-symbol type="string" name="config_qualified_networks_service_package" />
 
     <!-- Telephony qualified networks service class name to bind to by default. -->
