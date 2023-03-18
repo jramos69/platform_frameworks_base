@@ -961,6 +961,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 if (mResolvedLongPressOnPowerBehavior == LONG_PRESS_POWER_TORCH &&
                         (!isScreenOn() || isDozeMode())) {
                     wakeUpFromPowerKey(SystemClock.uptimeMillis());
+                }
             }
         } else {
             // handled by single key or another power key policy.
