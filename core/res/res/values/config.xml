@@ -125,10 +125,10 @@
 
     <!-- The attenuation in dB applied to the sound effects played
          through AudioManager.playSoundEffect() when no volume is specified. -->
-    <integer name="config_soundEffectVolumeDb">-6</integer>
+    <integer name="config_soundEffectVolumeDb">-3</integer>
 
     <!-- The attenuation in dB applied to the lock/unlock sounds. -->
-    <integer name="config_lockSoundVolumeDb">-6</integer>
+    <integer name="config_lockSoundVolumeDb">-3</integer>
 
     <!-- Flag indicating whether the AUDIO_BECOMING_NOISY notification should
          be sent during a change to the audio output device. -->
@@ -483,13 +483,13 @@
 
     <!-- Flag indicating whether we should enable the automatic brightness.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-    <bool name="config_automatic_brightness_available">false</bool>
+    <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Flag indicating whether we should enable the adaptive sleep.-->
-    <bool name="config_adaptive_sleep_available">false</bool>
+    <bool name="config_adaptive_sleep_available">true</bool>
 
     <!-- Flag indicating whether we should enable smart battery. -->
-    <bool name="config_smart_battery_available">false</bool>
+    <bool name="config_smart_battery_available">true</bool>
 
     <!-- Flag indicating whether we should enable camera-based autorotate -->
     <bool name="config_camera_autorotate">false</bool>
@@ -510,7 +510,7 @@
     <bool name="config_enableServerNotificationEffectsForAutomotive">false</bool>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
-    <bool name="config_unplugTurnsOnScreen">false</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <!-- If this is true, the message that USB is only being used for charging will be shown. -->
     <bool name="config_usbChargingMessage">true</bool>
@@ -1974,6 +1974,7 @@
          several permissions by the system, and should be system packages. -->
     <string-array name="config_locationProviderPackageNames" translatable="false">
         <!-- The standard AOSP fused location provider -->
+        <item>com.google.android.gms</item>
         <item>com.android.location.fused</item>
     </string-array>
 
@@ -2487,7 +2488,7 @@
     </integer-array>
 
     <!-- Are we allowed to dream while not plugged in? -->
-    <bool name="config_dreamsEnabledOnBattery">false</bool>
+    <bool name="config_dreamsEnabledOnBattery">true</bool>
     <!-- Minimum battery level to allow dreaming when powered.
          Use -1 to disable this safety feature. -->
     <integer name="config_dreamsBatteryLevelMinimumWhenPowered">-1</integer>
@@ -2538,7 +2539,7 @@
     <bool name="config_dozeAfterScreenOffByDefault">false</bool>
 
     <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
-    <bool name="config_dozePulsePickup">false</bool>
+    <bool name="config_dozePulsePickup">true</bool>
 
     <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
     <string name="config_dozeDoubleTapSensorType" translatable="false"></string>
@@ -3627,7 +3628,7 @@
     <bool name="config_allowAnimationsInLowPowerMode">false</bool>
 
     <!-- Whether device supports double tap to wake -->
-    <bool name="config_supportDoubleTapWake">false</bool>
+    <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- The RadioAccessFamilies supported by the device.
          Empty is viewed as "all".  Only used on devices which
@@ -3821,7 +3822,7 @@
 
     <!-- Controls whether hints for gestural navigation are shown when the device is setup.
          This should only be set when the device has gestural navigation enabled by default. -->
-    <bool name="config_showGesturalNavigationHints">false</bool>
+    <bool name="config_showGesturalNavigationHints">true</bool>
 
     <!-- Controls the free snap mode for the docked stack divider. In this mode, the divider can be
          snapped to any position between the first target and the last target. -->
@@ -4184,7 +4185,7 @@
          on the device.
          Example: "com.android.wellbeing"
      -->
-    <string name="config_defaultWellbeingPackage" translatable="false"></string>
+    <string name="config_defaultWellbeingPackage" translatable="false">com.google.android.apps.wellbeing</string>
 
     <!-- The component name for the default system attention service.
          This service must be trusted, as it can be activated without explicit consent of the user.
@@ -5417,7 +5418,7 @@
     <bool name="config_isCameraCompatControlForStretchedIssuesEnabled">false</bool>
 
     <!-- If true, hide the display cutout with display area -->
-    <bool name="config_hideDisplayCutoutWithDisplayArea">false</bool>
+    <bool name="config_hideDisplayCutoutWithDisplayArea">true</bool>
 
     <!-- The timeout value in milliseconds used by SelectionActionModeHelper for each selections
      when TextClassifier has been initialized. -->
