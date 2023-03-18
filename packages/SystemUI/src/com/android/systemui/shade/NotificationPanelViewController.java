@@ -53,6 +53,7 @@ import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.app.StatusBarManager;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.graphics.Color;
@@ -70,6 +71,7 @@ import android.provider.Settings;
 import android.util.IndentingPrintWriter;
 import android.util.Log;
 import android.util.MathUtils;
+import android.view.GestureDetector;
 import android.view.InputDevice;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -497,6 +499,8 @@ public final class NotificationPanelViewController implements ShadeSurface, Dump
     private final NotificationShadeDepthController mDepthController;
     private final NavigationBarController mNavigationBarController;
     private final int mDisplayId;
+    
+    private GestureDetector mDoubleTapGestureListener;
 
     private final KeyguardIndicationController mKeyguardIndicationController;
     private int mHeadsUpInset;
@@ -879,6 +883,16 @@ public final class NotificationPanelViewController implements ShadeSurface, Dump
         });
         mBottomAreaShadeAlphaAnimator.setDuration(160);
         mBottomAreaShadeAlphaAnimator.setInterpolator(Interpolators.ALPHA_OUT);
+        mDoubleTapGestureListener = new GestureDetector(mView.getContext(),
+                new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onDoubleTap(MotionEvent event) {
+                final PowerManager pm = (PowerManager) mView.getContext().getSystemService(
+                        Context.POWER_SERVICE);
+                pm.goToSleep(event.getEventTime());
+                return true;
+            }
+        });
         mConversationNotificationManager = conversationNotificationManager;
         mAuthController = authController;
         mLockIconViewController = lockIconViewController;
@@ -4786,6 +4800,10 @@ public final class NotificationPanelViewController implements ShadeSurface, Dump
                         "onTouch: ignore touch, bouncer scrimmed or showing over dream");
                 return false;
             }
+            
+            if (mBarState == StatusBarState.KEYGUARD) {
+                    mDoubleTapGestureListener.onTouchEvent(event);
+                }
 
             // Make sure the next touch won't the blocked after the current ends.
             if (event.getAction() == MotionEvent.ACTION_UP
