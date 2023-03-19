@@ -150,8 +150,8 @@ public class TunerServiceImpl extends TunerService {
                         TextUtils.join(",", iconHideList), mCurrentUser);
             }
         }
-        if (oldVersion < 2) {
-            setTunerEnabled(false);
+        if (oldVersion < 5) {
+            setTunerEnabled(true);
         }
         setValue(TUNER_VERSION, newVersion);
     }
