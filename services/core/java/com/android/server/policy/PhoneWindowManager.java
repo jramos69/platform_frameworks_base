@@ -959,7 +959,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 mHandler.post(mWindowManagerFuncs::triggerAnimationFailsafe);
                 // See if we deferred screen wake because long press power for torch is enabled
                 if (mResolvedLongPressOnPowerBehavior == LONG_PRESS_POWER_TORCH &&
-                        (!isScreenOn()) {
+                        (!isScreenOn())) {
                     wakeUpFromPowerKey(SystemClock.uptimeMillis());
                 }
             }

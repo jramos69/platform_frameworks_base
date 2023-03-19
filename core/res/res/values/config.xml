@@ -5418,7 +5418,7 @@
     <bool name="config_isCameraCompatControlForStretchedIssuesEnabled">false</bool>
 
     <!-- If true, hide the display cutout with display area -->
-    <bool name="config_hideDisplayCutoutWithDisplayArea">true</bool>
+    <bool name="config_hideDisplayCutoutWithDisplayArea">false</bool>
 
     <!-- The timeout value in milliseconds used by SelectionActionModeHelper for each selections
      when TextClassifier has been initialized. -->
