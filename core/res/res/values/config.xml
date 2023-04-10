@@ -6083,5 +6083,8 @@
     <integer name="config_torchProximityTimeout">300</integer>
     
     <!-- Enable face auth only when swiping security view -->
-    <java-symbol type="bool" name="config_faceAuthOnlyOnSecurityView" />
+    <bool name="config_faceAuthOnlyOnSecurityView">false</bool>
+
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">false</bool>
 </resources>
