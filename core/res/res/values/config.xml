@@ -548,7 +548,7 @@
     <!-- If this is true, go to sleep when theater mode is enabled from button press -->
     <bool name="config_goToSleepOnButtonPressTheaterMode">true</bool>
     <!-- If this is true, long press on power button will be available from the non-interactive state -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">false</bool>
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
     <!-- If this is true, then keep dreaming when undocking. -->
     <bool name="config_keepDreamingWhenUndocking">false</bool>
@@ -1265,7 +1265,7 @@
 
     <!-- The app which will handle routine based automatic battery saver, if empty the UI for
          routine based battery saver will be hidden -->
-    <string name="config_batterySaverScheduleProvider"></string>
+    <string name="config_batterySaverScheduleProvider">com.google.android.apps.turbo</string>
 
     <!-- Close low battery warning when battery level reaches the lowBatteryWarningLevel
          plus this -->
@@ -3337,7 +3337,7 @@
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
-    <string name="config_deviceConfiguratorPackageName" translatable="false">com.google.android.gms</string>
+    <string name="config_deviceConfiguratorPackageName" translatable="false"></string>
 
     <!-- Flag indicating apps will skip sending hold request before merge. In this case
         IMS service implementation will do both.i.e.hold followed by merge. -->
@@ -3840,7 +3840,7 @@
 
     <!-- List of comma separated package names for which we the system will not show crash, ANR,
          etc. dialogs. -->
-    <string translatable="false" name="config_appsNotReportingCrashes"></string>
+    <string translatable="false" name="config_appsNotReportingCrashes">com.google.android.euicc</string>
 
     <!-- Inactivity threshold (in milliseconds) used in JobScheduler. JobScheduler will consider
          the device to be "idle" after being inactive for this long. -->
@@ -4169,13 +4169,13 @@
          on the device.
          Example: "com.android.wellbeing"
      -->
-    <string name="config_defaultWellbeingPackage" translatable="false"></string>
+    <string name="config_defaultWellbeingPackage" translatable="false">com.google.android.apps.wellbeing</string>
 
     <!-- The component name for the default system attention service.
          This service must be trusted, as it can be activated without explicit consent of the user.
          See android.attention.AttentionManagerService.
     -->
-    <string name="config_defaultAttentionService" translatable="false"></string>
+    <string name="config_defaultAttentionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.attention.service.AiAiAttentionService</string>
 
     <!-- The component name for the default system rotation resolver service.
         This service must be trusted, as it can be activated without explicit consent of the user.
@@ -4203,7 +4203,7 @@
          This service must be trusted, as the system binds to it and keeps it running.
          Example: "com.android.captions/.SystemCaptionsManagerService"
     -->
-    <string name="config_defaultSystemCaptionsManagerService" translatable="false"></string>
+    <string name="config_defaultSystemCaptionsManagerService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
 
     <!-- Indicates whether the system wide captions service should also support
          call captioning.
@@ -4254,7 +4254,7 @@
          This service must be trusted, as it can be activated without explicit consent of the user.
          Example: "com.android.intelligence/.AppPredictionService"
     -->
-    <string name="config_defaultAppPredictionService" translatable="false"></string>
+    <string name="config_defaultAppPredictionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
 
     <!-- The package name for the system's content suggestions service.
          Provides suggestions for text and image selection regions in snapshots of apps and should
@@ -4292,7 +4292,7 @@
     -->
     <string name="config_defaultOnDeviceSpeechRecognitionService" translatable="false"></string>
 
-    <string name="config_defaultMusicRecognitionService" translatable="false"></string>
+    <string name="config_defaultMusicRecognitionService" translatable="false">com.google.android.googlequicksearchbox/com.google.android.apps.search.soundsearch.service.SoundSearchService</string>
 
     <!-- The package name for the system's wallpaper effects generation service.
     This service returns wallpaper effects results.
@@ -4484,7 +4484,7 @@
     <string name="config_bodyFontFamilyMedium" translatable="false">sans-serif-medium</string>
 
     <!-- Name of the font family to use in the default lockscreen clock -->
-    <string name="config_clockFontFamily" translatable="false">monospace</string>
+    <string name="config_clockFontFamily" translatable="false">google-sans-clock</string>
 
     <!-- Size of icon shown beside a preference locked by admin -->
     <dimen name="config_restrictedIconSize">@dimen/restricted_icon_size_material</dimen>
@@ -5418,7 +5418,7 @@
     <!-- Chooser image editing activity.  Must handle ACTION_EDIT image/png intents.
          If omitted, image editing will not be offered via Chooser.
          This name is in the ComponentName flattened format (package/class) [DO NOT TRANSLATE]  -->
-    <string name="config_systemImageEditor" translatable="false"></string>
+    <string name="config_systemImageEditor" translatable="false">com.google.android.markup/com.google.android.markup.AnnotateActivity</string>
 
     <!-- Whether to force WindowOrientationListener to keep listening to its sensor, even when
          dreaming. This allows the AoD to rotate on devices without a wake device_orientation
