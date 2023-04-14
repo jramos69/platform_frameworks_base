@@ -309,7 +309,7 @@
     <integer name="config_showTemperatureWarning">0</integer>
 
     <!-- Whether to show a alarm dialog when device's usb port is overheating. -->
-    <integer name="config_showUsbPortAlarm">0</integer>
+    <integer name="config_showUsbPortAlarm">1</integer>
 
     <item type="id" name="action_toggle_overview"/>
 
@@ -464,7 +464,7 @@
 
     <!-- Preferred refresh rate at keyguard, if supported by the display. Overrides
          keyguardMaxRefreshRate. -->
-    <integer name="config_keyguardRefreshRate">-1</integer>
+    <integer name="config_keyguardRefreshRate">120</integer>
 
     <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
     <integer name="config_keyguardMaxRefreshRate">-1</integer>
@@ -589,7 +589,7 @@
 
     <!-- package name of a built-in camera app to use to restrict implicit intent resolution
          when the double-press power gesture is used. Ignored if empty. -->
-    <string translatable="false" name="config_cameraGesturePackage"></string>
+    <string translatable="false" name="config_cameraGesturePackage">com.google.android.GoogleCamera</string>
 
     <!-- Whether a transition of ACTIVITY_TYPE_DREAM to the home app should play a home sound
          effect -->
