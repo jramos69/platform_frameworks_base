@@ -347,7 +347,7 @@ public class PhoneStatusBarPolicy
                 mResources.getString(R.string.accessibility_status_bar_nfc));
 
         mIconController.setIconVisibility(mSlotNfc, false);
-        updateNfc()
+        updateNfc();
 
         mRotationLockController.addCallback(this);
         mBluetooth.addCallback(this);
