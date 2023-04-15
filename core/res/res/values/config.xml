@@ -3337,7 +3337,7 @@
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
-    <string name="config_deviceConfiguratorPackageName" translatable="false"></string>
+    <string name="config_deviceConfiguratorPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating apps will skip sending hold request before merge. In this case
         IMS service implementation will do both.i.e.hold followed by merge. -->
@@ -3988,7 +3988,7 @@
     <integer name="config_keepPreloadsMinDays">7</integer>
 
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">false</bool>
+    <bool name="config_useRoundIcon">true</bool>
 
     <!-- Flag indicating whether the assist disclosure can be disabled using
          ASSIST_DISCLOSURE_ENABLED. -->
@@ -4013,7 +4013,7 @@
     <string name="config_deviceProvisioningPackage"></string>
 
     <!-- Colon separated list of package names that should be granted DND access -->
-    <string name="config_defaultDndAccessPackages" translatable="false">com.android.camera2</string>
+    <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.GoogleCamera</string>
 
     <!-- User restrictions set when the first user is created.
          Note: Also update appropriate overlay files. -->
@@ -4150,7 +4150,10 @@
          Note that config_companionDeviceManagerPackage and config_companionDeviceCerts are
          parallel arrays.
      -->
-    <string-array name="config_companionDevicePackages" translatable="false"></string-array>
+    <string-array name="config_companionDevicePackages" translatable="false">
+    	<item>com.google.android.apps.wear.companion</item>
+        <item>com.google.android.apps.wear.companion</item>
+    </string-array>
 
     <!-- A list of SHA256 Certificates managing companion device(s) by the same manufacturers as
          the main device. It will fall back to showing a prompt if the association has been called
@@ -4181,23 +4184,23 @@
         This service must be trusted, as it can be activated without explicit consent of the user.
         See android.service.rotationresolver.RotationResolverService.
    -->
-    <string name="config_defaultRotationResolverService" translatable="false"></string>
+    <string name="config_defaultRotationResolverService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiRotationResolverService</string>
 
     <!-- The component name for the default system AmbientContextEvent detection service.
         This service must be trusted, as it can be activated without explicit consent of the user.
         See android.service.ambientcontext.AmbientContextDetectionService.
    -->
-    <string name="config_defaultAmbientContextDetectionService" translatable="false"></string>
+    <string name="config_defaultAmbientContextDetectionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAmbientContextDetectionService</string>
 
     <!-- Component name that accepts ACTION_SEND intents for requesting ambient context consent. -->
-    <string translatable="false" name="config_defaultAmbientContextConsentComponent"></string>
+    <string translatable="false" name="config_defaultAmbientContextConsentComponent">com.google.android.as/com.google.android.apps.miphone.aiai.ambientcontext.ui.ConsentActivity</string>
 
     <!-- Intent extra key for the caller's package name while requesting ambient context consent.
      -->
-    <string translatable="false" name="config_ambientContextPackageNameExtraKey"></string>
+    <string translatable="false" name="config_ambientContextPackageNameExtraKey">PACKAGE_NAME</string>
 
     <!-- Intent extra key for the event code int array while requesting ambient context consent. -->
-    <string translatable="false" name="config_ambientContextEventArrayExtraKey"></string>
+    <string translatable="false" name="config_ambientContextEventArrayExtraKey">EVENT_ARRAY</string>
 
     <!-- The component name for the system-wide captions manager service.
          This service must be trusted, as the system binds to it and keeps it running.
@@ -4223,7 +4226,7 @@
          disabled.
          Example: "com.android.contentcapture/.ContentcaptureService"
     -->
-    <string name="config_defaultContentCaptureService" translatable="false"></string>
+    <string name="config_defaultContentCaptureService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService</string>
 
     <!-- The package name for the system's augmented autofill service.
          This service must be trusted, as it can be activated without explicit consent of the user.
@@ -4231,7 +4234,7 @@
          disabled.
          Example: "com.android.augmentedautofill/.AugmentedAutofillService"
     -->
-    <string name="config_defaultAugmentedAutofillService" translatable="false"></string>
+    <string name="config_defaultAugmentedAutofillService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAugmentedAutofillService</string>
 
     <!-- The package name list for the system's cloudsearch service.
           This service returns cloudsearch results.
@@ -4265,7 +4268,7 @@
          disabled.
          Example: "com.android.contentsuggestions/.ContentSuggestionsService"
     -->
-    <string name="config_defaultContentSuggestionsService" translatable="false"></string>
+    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
 
     <!-- The package name for the system's search ui service.
      This service returns search results when provided with an input string.
@@ -4348,10 +4351,10 @@
     <string name="config_helpIntentNameKey" translatable="false"></string>
 
     <!-- Intent key for the package name keys -->
-    <string name="config_feedbackIntentExtraKey" translatable="false"></string>
+    <string name="config_feedbackIntentExtraKey" translatable="false">EXTRA_FEEDBACK_PSD_KEYS</string>
 
     <!-- Intent key for package name values -->
-    <string name="config_feedbackIntentNameKey" translatable="false"></string>
+    <string name="config_feedbackIntentNameKey" translatable="false">EXTRA_FEEDBACK_PSD_VALUES</string>
 
     <!-- The apps that need to be hidden when they are disabled -->
     <string-array name="config_hideWhenDisabled_packageNames"></string-array>
@@ -4492,7 +4495,7 @@
     <string translatable="false" name="config_batterySaverDeviceSpecificConfig"></string>
 
     <!-- Component name that should be granted Notification Assistant access -->
-    <string name="config_defaultAssistantAccessComponent" translatable="false">android.ext.services/android.ext.services.notification.Assistant</string>
+    <string name="config_defaultAssistantAccessComponent" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService</string>
 
     <bool name="config_keepRestrictedProfilesInBackground">true</bool>
 
