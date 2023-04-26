@@ -2523,7 +2523,7 @@
     <bool name="config_dozePulsePickup">true</bool>
 
     <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
-    <string name="config_dozeDoubleTapSensorType" translatable="false">com.google.sensor.double_touch</string>
+    <string name="config_dozeDoubleTapSensorType" translatable="false"></string>
 
     <!-- Type of the tap sensor. Empty if tap is not supported. -->
     <string name="config_dozeTapSensorType" translatable="false"></string>
