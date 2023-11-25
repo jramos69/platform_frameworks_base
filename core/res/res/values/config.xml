@@ -246,7 +246,7 @@
          dozing).  This should be enabled if you have such services and expect apps to
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
-    <bool name="config_enableAutoPowerModes">false</bool>
+    <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Whether (if true) this is a kind of device that can be moved around (eg. phone/laptop),
          or (if false) something for which movement is either not measurable or should not count
@@ -1226,10 +1226,10 @@
     <integer name="config_wakeUpToLastStateTimeoutMillis">0</integer>
 
     <!-- Package name for default keyguard appwidget [DO NOT TRANSLATE] -->
-    <string name="widget_default_package_name" translatable="false"></string>
+    <string name="widget_default_package_name" translatable="false">com.android.deskclock</string>
 
     <!-- Class name for default keyguard appwidget [DO NOT TRANSLATE] -->
-    <string name="widget_default_class_name" translatable="false"></string>
+    <string name="widget_default_class_name" translatable="false">com.android.alarmclock.DigitalAppWidgetProvider</string>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">false</bool>
@@ -1798,14 +1798,15 @@
          that has been granted the PACKAGE_EPHEMERAL_AGENT permission.
          This may be empty if ephemeral apps are not supported. -->
     <string-array name="config_ephemeralResolverPackage" translatable="false">
-        <!-- Add packages here -->
+        <item>com.google.android.gms</item>
     </string-array>
 
     <!-- The set of system packages on device that are queryable by any app regardless of the
          contents of its manifest. -->
     <string-array name="config_forceQueryablePackages" translatable="false">
         <item>com.android.settings</item>
-        <item>com.android.providers.settings</item>
+        <item>com.google.android.gms</item>
+        <item>com.android.vending</item>
         <!-- Add packages here -->
     </string-array>
 
@@ -1854,7 +1855,7 @@
          This setting is ignored if config_enableGeolocationTimeZoneDetection is false.
 
          AOSP does not configure a primary location time zone provider. -->
-    <bool name="config_enablePrimaryLocationTimeZoneProvider" translatable="false">false</bool>
+    <bool name="config_enablePrimaryLocationTimeZoneProvider" translatable="false">true</bool>
 
     <!-- The package hosting the primary location time zone provider.
          Only used when config_enableGeolocationTimeZoneDetection and
@@ -1862,7 +1863,7 @@
 
          See android.service.timezone.TimeZoneProviderService for how to host location time zone
          provider services. -->
-    <string name="config_primaryLocationTimeZoneProviderPackageName" translatable="false"></string>
+    <string name="config_primaryLocationTimeZoneProviderPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Whether the secondary location time zone provider is enabled.
          This setting is ignored if config_enableGeolocationTimeZoneDetection is false.
@@ -1942,13 +1943,13 @@
 
          This must be set to a valid network recommendation app or empty.
      -->
-    <string name="config_defaultNetworkRecommendationProviderPackage" translatable="false"></string>
+    <string name="config_defaultNetworkRecommendationProviderPackage" translatable="false">com.google.android.gms</string>
 
     <!-- The package name of the default search selector app. Must be granted the POST_NOTIFICATIONS
          permission, and notifications from this app must be given the notification flag
          FLAG_NO_DISMISS if the notification requests FLAG_ONGOING_EVENT.
     -->
-    <string name="config_defaultSearchSelectorPackageName" translatable="false"></string>
+    <string name="config_defaultSearchSelectorPackageName" translatable="false">com.google.android.apps.setupwizard.searchselector</string>
 
     <!-- The package name of the default captive portal login app. Must be granted the
          POST_NOTIFICATIONS permission.
@@ -1995,7 +1996,7 @@
     <!-- Package name(s) containing location provider support. These packages will be auto-granted
          several permissions by the system, and should be system packages. -->
     <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- The standard AOSP fused location provider -->
+        <item>com.google.android.gms</item>
         <item>com.android.location.fused</item>
     </string-array>
 
@@ -2197,7 +2198,7 @@
     <string name="default_browser" translatable="false"></string>
 
     <!-- The name of the package that will hold the assistant role by default. -->
-    <string name="config_defaultAssistant" translatable="false" />
+    <string name="config_defaultAssistant" translatable="false">com.google.android.googlequicksearchbox</string>
     <!-- Whether the default assistant settings should be shown. -->
     <bool name="config_showDefaultAssistant">true</bool>
     <!-- The name of the package that will hold the browser role by default. -->
@@ -2217,7 +2218,7 @@
     <!-- The name of the package that will hold the system gallery role. -->
     <string name="config_systemGallery" translatable="false">com.google.android.apps.photosgo</string>
     <!-- The names of the packages that will hold the automotive projection role. -->
-    <string name="config_systemAutomotiveProjection" translatable="false"></string>
+    <string name="config_systemAutomotiveProjection" translatable="false">com.google.android.projection.gearhead</string>
     <!-- The name of the package that will hold the system cluster service role. -->
     <string name="config_systemAutomotiveCluster" translatable="false"></string>
     <!-- The name of the package that will hold the system shell role. -->
@@ -2225,24 +2226,24 @@
     <!-- The name of the package that will hold the system contacts role. -->
     <string name="config_systemContacts" translatable="false">com.android.contacts</string>
     <!-- The name of the package that will hold the speech recognizer role by default. -->
-    <string name="config_systemSpeechRecognizer" translatable="false"></string>
+    <string name="config_systemSpeechRecognizer" translatable="false">com.google.android.tts</string>
     <!-- The name of the package that will hold the system Wi-Fi coex manager role. -->
     <string name="config_systemWifiCoexManager" translatable="false"></string>
     <!-- The name of the package that will hold the wellbeing role. -->
-    <string name="config_systemWellbeing" translatable="false"></string>
+    <string name="config_systemWellbeing" translatable="false">com.google.android.apps.wellbeing</string>
     <!-- The name of the package that will hold the game service role. -->
-    <string name="config_systemGameService" translatable="false"></string>
+    <string name="config_systemGameService" translatable="false">com.google.android.gms</string>
     <!-- The name of the package that will hold the television notification handler role -->
     <string name="config_systemTelevisionNotificationHandler" translatable="false"></string>
     <!-- The name of the package that will hold the system activity recognizer role. -->
-    <string name="config_systemActivityRecognizer" translatable="false"></string>
+    <string name="config_systemActivityRecognizer" translatable="false">com.google.android.gms</string>
     <!-- The name of the package that will hold the system ui role -->
     <string name="config_systemUi" translatable="false">com.android.systemui</string>
     <!-- The name of the package that will hold the television remote service role.
         TODO(b/189347385) make this a @SystemAPI -->
     <string name="config_systemTelevisionRemoteService" translatable="false">@string/config_tvRemoteServicePackage</string>
     <!-- The name of the package that will hold the device management role -->
-    <string name="config_devicePolicyManagement" translatable="false"></string>
+    <string name="config_devicePolicyManagement" translatable="false">com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58</string>
     <!-- The name of the package that will hold the app protection service role. -->
     <string name="config_systemAppProtectionService" translatable="false"></string>
     <!-- The name of the package that will hold the system calendar sync manager role. -->
@@ -2260,13 +2261,13 @@
     <!-- The name of the package that will hold the system financed device controller role. -->
     <string name="config_systemFinancedDeviceController" translatable="false">com.android.devicelockcontroller</string>
     <!-- The name of the package that will hold the call streaming role. -->
-    <string name="config_systemCallStreaming" translatable="false"></string>
+    <string name="config_systemCallStreaming" translatable="false">com.google.android.gms</string>
 
     <!-- The component name of the wear service class that will be started by the system server. -->
     <string name="config_wearServiceComponent" translatable="false"></string>
 
     <!-- The name of the package that will handle updating the device management role. -->
-    <string name="config_devicePolicyManagementUpdater" translatable="false"></string>
+    <string name="config_devicePolicyManagementUpdater" translatable="false">com.google.android.gms</string>
 
     <!-- The name of the package that will be allowed to change its components' label/icon. -->
     <string name="config_overrideComponentUiPackage" translatable="false">com.android.stk</string>
@@ -3175,11 +3176,11 @@
             >com.android.credentialmanager/com.android.credentialmanager.CredentialProviderReceiver</string>
 
     <!-- Apps that are authorized to access shared accounts, overridden by product overlays -->
-    <string name="config_appsAuthorizedForSharedAccounts" translatable="false">;com.android.settings;</string>
+    <string name="config_appsAuthorizedForSharedAccounts" translatable="false">;com.android.vending;com.android.settings;</string>
 
     <!-- System settings intelligence package name -->
     <string name="config_systemSettingsIntelligence" translatable="false">
-        com.android.settings.intelligence
+        com.google.android.settings.intelligence
     </string>
 
     <!-- System bluetooth stack package name -->
@@ -3517,10 +3518,10 @@
     </string-array>
 
     <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false"></string>
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
-    <string name="config_deviceConfiguratorPackageName" translatable="false"></string>
+    <string name="config_deviceConfiguratorPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating apps will skip sending hold request before merge. In this case
         IMS service implementation will do both.i.e.hold followed by merge. -->
@@ -4275,10 +4276,10 @@
          enabled by the accessibility shortcut. This service must be trusted, as it can be activated
          without explicit consent of the user. If no accessibility service with the specified name
          exists on the device, the accessibility shortcut will be disabled by default. -->
-    <string name="config_defaultAccessibilityService" translatable="false"></string>
+    <string name="config_defaultAccessibilityService" translatable="false">com.google.android.marvin.talkback/.TalkBackService</string>
 
     <!-- URI for default Accessibility notification sound when to enable accessibility shortcut. -->
-    <string name="config_defaultAccessibilityNotificationSound" translatable="false"></string>
+    <string name="config_defaultAccessibilityNotificationSound" translatable="false">Effect_Tick.ogg</string>
 
     <!-- Warning: This API can be dangerous when not implemented properly. In particular,
          escrow token must NOT be retrievable from device storage. In other words, either
@@ -4294,7 +4295,7 @@
     <string name="config_defaultTrustAgent" translatable="false"></string>
 
     <!-- Colon separated list of package names that should be granted Notification Listener access -->
-    <string name="config_defaultListenerAccessPackages" translatable="false">com.android.launcher3</string>
+    <string name="config_defaultListenerAccessPackages" translatable="false">com.android.launcher3:com.google.android.setupwizard:com.google.android.apps.pixelmigrate</string>
 
     <!-- Maximum size, specified in pixels, to restrain the display space width to. Height and
          density will be scaled accordingly to maintain aspect ratio. A value of 0 indicates no
@@ -4309,7 +4310,7 @@
          without explicit consent of the user. If no autofill service with the
           specified name exists on the device, autofill will be disabled by default.
     -->
-    <string name="config_defaultAutofillService" translatable="false"></string>
+    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
 
     <!-- The component name, flattened to a string, for the default field classification service
          to  enabled for a user. This service must be trusted, as it can be activated
@@ -4342,7 +4343,10 @@
          Note that config_companionDeviceManagerPackage and config_companionDeviceCerts are
          parallel arrays.
      -->
-    <string-array name="config_companionDevicePackages" translatable="false"></string-array>
+    <string-array name="config_companionDevicePackages" translatable="false">
+    	<item>com.google.android.apps.wear.companion</item>
+        <item>com.google.android.apps.wear.companion</item>
+    </string-array>
 
     <!-- A list of SHA256 Certificates managing companion device(s) by the same manufacturers as
          the main device. It will fall back to showing a prompt if the association has been called
@@ -4351,7 +4355,10 @@
          arrays.
          Example: "1A:2B:3C:4D"
      -->
-    <string-array name="config_companionDeviceCerts" translatable="false"></string-array>
+    <string-array name="config_companionDeviceCerts" translatable="false">
+    	<item>92:3F:B8:D6:48:71:01:14:8D:8D:C0:F7:90:11:5D:BA:34:CF:0E:A3:AA:5D:3B:B0:74:D2:D9:73:58:8C:39:3A</item>
+        <item>48:ED:00:58:D1:B6:63:8E:39:A6:E4:C2:DF:1C:4D:5F:DF:59:3F:69:6B:F3:1B:09:A8:8F:93:14:1E:AF:60:0F</item>
+    </string-array>
 
     <!-- The package name for the default wellbeing app.
          This package must be trusted, as it has the permissions to control other applications
@@ -4509,7 +4516,7 @@
 
      See android.credentials.CredentialManager
     -->
-    <string name="config_defaultCredentialManagerHybridService" translatable="false"></string>
+    <string name="config_defaultCredentialManagerHybridService" translatable="false">com.google.android.gms/.auth.api.credentials.credman.service.RemoteService</string>
 
     <!-- The component name(s), flattened to a string, for the system's credential manager
       provider services. These services allow retrieving and storing credentials.
@@ -4522,6 +4529,7 @@
      See android.credentials.CredentialManager
     -->
     <string-array name="config_enabledCredentialProviderService" translatable="false">
+    	<item>com.google.android.gms/.auth.api.credentials.credman.service.PasswordAndPasskeyService</item>
     </string-array>
 
     <!-- The component name(s), flattened to a string, for the system's primary credential manager
@@ -4532,6 +4540,7 @@
      See android.credentials.CredentialManager
     -->
     <string-array name="config_primaryCredentialProviderService" translatable="false">
+    	<item>com.google.android.gms/.auth.api.credentials.credman.service.PasswordAndPasskeyService</item>
     </string-array>
 
     <!-- The package name for the system's smartspace service.
@@ -4620,7 +4629,10 @@
     <string-array name="config_allowedSystemInstantAppSettings"></string-array>
 
     <!-- Additional non-platform defined secure settings exposed to Instant Apps -->
-    <string-array name="config_allowedSecureInstantAppSettings"></string-array>
+    <string-array name="config_allowedSecureInstantAppSettings">
+    	<item>advertising_id</item>
+        <item>limit_ad_tracking</item>
+    </string-array>
 
     <!-- Handle volume keys directly in Window Manager without passing them to the foreground app -->
     <bool name="config_handleVolumeKeysInWindowManager">false</bool>
@@ -5242,6 +5254,7 @@
          used to hide messages that may be too chatty or messages that the user can't do much about.
          Entries are defined in android.hardware.biometrics.face@1.0 types.hal -->
     <integer-array name="config_face_acquire_enroll_ignorelist" translatable="false" >
+    	<item>13</item>
     </integer-array>
     <!-- Same as the above, but are defined by vendorCodes -->
     <integer-array name="config_face_acquire_vendor_enroll_ignorelist" translatable="false" >
@@ -5262,6 +5275,23 @@
          that the user can't do much about. Entries are defined in
          android.hardware.biometrics.face@1.0 types.hal -->
     <integer-array name="config_face_acquire_biometricprompt_ignorelist" translatable="false" >
+    	<item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
     </integer-array>
     <!-- Same as the above, but are defined by vendorCodes -->
     <integer-array name="config_face_acquire_vendor_biometricprompt_ignorelist" translatable="false" >
@@ -5327,7 +5357,8 @@
     <!-- A list of potential packages, in priority order, that can supply rules to
          AppIntegrityManager. These need to be apps on the system partition. -->
     <string-array name="config_integrityRuleProviderPackages" translatable="false">
-        <!-- Add packages here -->
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
     </string-array>
 
     <!-- Whether or not wcg (wide color gamut) should be enabled on this device,
@@ -5382,7 +5413,7 @@
     <string name="config_customCountryDetector" translatable="false">com.android.server.location.ComprehensiveCountryDetector</string>
 
     <!-- Package name of the required service extension package. -->
-    <string name="config_servicesExtensionPackage" translatable="false">android.ext.services</string>
+    <string name="config_servicesExtensionPackage" translatable="false">com.google.android.ext.services</string>
 
     <!-- Retention policy: number of records to kept for the historical exit info per package. -->
     <integer name="config_app_exit_info_history_list_size">16</integer>
@@ -5401,14 +5432,14 @@
 
     <!-- Component name that accepts ACTION_SEND intents for nearby (proximity-based) sharing.
          Used by ChooserActivity. -->
-    <string translatable="false" name="config_defaultNearbySharingComponent"></string>
+    <string translatable="false" name="config_defaultNearbySharingComponent">com.google.android.gms/com.google.android.gms.nearby.sharing.ShareSheetActivity</string>
 
     <!-- URI used for Nearby Share SliceProvider scanning. -->
     <string translatable="false" name="config_defaultNearbySharingSliceUri"></string>
 
     <!-- Component name that accepts settings intents for saved devices.
              Used by FastPairSettingsFragment. -->
-    <string translatable="false" name="config_defaultNearbyFastPairSettingsDevicesComponent"></string>
+    <string translatable="false" name="config_defaultNearbyFastPairSettingsDevicesComponent">com.google.android.gms/com.google.android.gms.nearby.discovery.devices.SavedDevicesSettingsActivity</string>
 
     <!-- Boolean indicating whether frameworks needs to reset cell broadcast geo-fencing
          check after reboot or airplane mode toggling -->
@@ -5991,7 +6022,7 @@
          features. Examples include the autorotate feature. -->
     <string name="config_systemVisualIntelligence" translatable="false">com.google.android.as</string>
     <!-- On-device package for providing companion device associations. -->
-    <string name="config_systemCompanionDeviceProvider" translatable="false"></string>
+    <string name="config_systemCompanionDeviceProvider" translatable="false">com.google.android.gms</string>
 
     <!-- Whether this device is supporting the software microphone toggle -->
     <bool name="config_supportsMicToggle">false</bool>
@@ -6222,13 +6253,13 @@
     <bool name="config_safetyProtectionEnabled">true</bool>
 
     <!-- Flag indicating if help links for Settings app should be enabled. -->
-    <bool name="config_settingsHelpLinksEnabled">false</bool>
+    <bool name="config_settingsHelpLinksEnabled">true</bool>
 
     <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
     <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
 
     <!-- Default component for QR code scanner -->
-    <string name="config_defaultQrCodeComponent"></string>
+    <string name="config_defaultQrCodeComponent">com.google.android.gms/.mlkit.barcode.ui.PlatformBarcodeScanningActivityProxy</string>
 
     <!-- Whether Low Power Standby is supported and can be enabled. -->
     <bool name="config_lowPowerStandbySupported">false</bool>
@@ -6357,7 +6388,7 @@
     <item name="ic_safety_protection" type="drawable">@null</item>
 
     <!-- Display text for safety protection to be overlaid. This is translatable -->
-    <string name="safety_protection_display_text"></string>
+    <string name="safety_protection_display_text">&lt;font face=\"google-sans\">Protected by &lt;/font>&lt;font face=\"google-sans-medium\">Android&lt;/font></string>
 
     <!-- End safety protection resources to be overlaid -->
 
@@ -6403,6 +6434,7 @@
 
     <!-- List of certificate to be used for font fs-verity integrity verification -->
     <string-array translatable="false" name="config_fontManagerServiceCerts">
+    	<item>/product/etc/security/fsverity/gms_fsverity_cert.der</item>
     </string-array>
 
     <!-- A string config in svg path format for the main display shape.
@@ -6441,15 +6473,17 @@
          permission for staging HealthConnect's remote data. The digest should be computed over the
          DER encoding of the trusted certificate using the SHA-256 digest algorithm. -->
     <string-array name="config_healthConnectRestoreKnownSigners">
+    	<item>56BE132B780656FE2444CD34326EB5D7AAC91D2096ABF0FE673A99270622EC87</item>
     </string-array>
     <!-- Certificate digests for trusted apps that will be allowed to obtain the knownSigner Health
         Connect Migration permissions. The digest should be computed over the DER encoding of the
         trusted certificate using the SHA-256 digest algorithm. -->
     <string-array name="config_healthConnectMigrationKnownSigners">
+    	<item>B2C0A80E485934BFB08F902CA27505813DF3159E4E6DD4A4DF078D66CB1C2003</item>
     </string-array>
 
     <!-- Package name of Health Connect data migrator application.  -->
-    <string name="config_healthConnectMigratorPackageName"></string>
+    <string name="config_healthConnectMigratorPackageName">com.google.android.apps.healthdata</string>
 
     <!-- Whether system apps should be scanned in the stopped state during initial boot.
         Packages can be added by OEMs in an allowlist, to prevent them from being scanned as
