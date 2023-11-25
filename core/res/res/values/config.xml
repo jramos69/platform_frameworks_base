@@ -5427,7 +5427,7 @@
     <string name="config_customCountryDetector" translatable="false">com.android.server.location.ComprehensiveCountryDetector</string>
 
     <!-- Package name of the required service extension package. -->
-    <string name="config_servicesExtensionPackage" translatable="false">com.google.android.ext.services</string>
+    <string name="config_servicesExtensionPackage" translatable="false">com.android.ext.services</string>
 
     <!-- Retention policy: number of records to kept for the historical exit info per package. -->
     <integer name="config_app_exit_info_history_list_size">16</integer>
