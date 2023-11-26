@@ -469,13 +469,13 @@
 
     <!-- Flag indicating whether we should enable the automatic brightness.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-    <bool name="config_automatic_brightness_available">false</bool>
+    <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Flag indicating whether we should enable the adaptive sleep.-->
-    <bool name="config_adaptive_sleep_available">false</bool>
+    <bool name="config_adaptive_sleep_available">true</bool>
 
     <!-- Flag indicating whether we should enable smart battery. -->
-    <bool name="config_smart_battery_available">false</bool>
+    <bool name="config_smart_battery_available">true</bool>
 
     <!-- Flag indicating whether we should enable camera-based autorotate -->
     <bool name="config_camera_autorotate">false</bool>
@@ -534,7 +534,7 @@
     <!-- If this is true, go to sleep when theater mode is enabled from button press -->
     <bool name="config_goToSleepOnButtonPressTheaterMode">true</bool>
     <!-- If this is true, long press on power button will be available from the non-interactive state -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">false</bool>
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
     <!-- If this is true, then keep dreaming when unplugging.
          This config was formerly known as config_keepDreamingWhenUndocking.
@@ -2291,7 +2291,7 @@
     <!-- The name of the package that will hold the device management role -->
     <string name="config_devicePolicyManagement" translatable="false"></string>
     <!-- The name of the package that will hold the app protection service role. -->
-    <string name="config_systemAppProtectionService" translatable="false"></string>
+    <string name="config_systemAppProtectionService" translatable="false">com.google.android.odad</string>
     <!-- The name of the package that will hold the system calendar sync manager role. -->
     <string name="config_systemAutomotiveCalendarSyncManager" translatable="false"></string>
     <!-- The name of the package that will hold the default automotive navigation role. -->
@@ -3817,7 +3817,7 @@
     <integer name="config_fingerprintMaxTemplatesPerUser">5</integer>
 
     <!-- Specify if the fingerprint hardware support gestures-->
-    <bool name="config_fingerprintSupportsGestures">false</bool>
+    <bool name="config_fingerprintSupportsGestures">true</bool>
 
     <!-- The time (in millis) to wait for a power button before sending
          a successful auth in biometric prompt(for side fingerprint) -->
@@ -4233,7 +4233,7 @@
     <integer name="config_keepPreloadsMinDays">7</integer>
 
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">false</bool>
+    <bool name="config_useRoundIcon">true</bool>
 
     <!-- Flag indicating whether the assist disclosure can be disabled using
          ASSIST_DISCLOSURE_ENABLED. -->
@@ -4258,7 +4258,7 @@
     <string name="config_deviceProvisioningPackage"></string>
 
     <!-- Colon separated list of package names that should be granted DND access -->
-    <string name="config_defaultDndAccessPackages" translatable="false">com.android.camera2</string>
+    <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.GoogleCamera:com.google.android.gms:com.google.intelligence.sense:com.google.android.settings.intelligence:com.google.android.apps.wellbeing:com.google.android.apps.safetyhub:com.google.android.dialer:com.google.android.apps.diagnosticstool</string>
 
     <!-- User restrictions set on the SYSTEM user when it is first created.
          Note: Also update appropriate overlay files. -->
@@ -4378,7 +4378,7 @@
 
          See android.view.textclassifier.TextClassificationManager.
     -->
-    <string name="config_defaultTextClassifierPackage" translatable="false"></string>
+    <string name="config_defaultTextClassifierPackage" translatable="false">com.google.android.as</string>
 
 
     <!-- The package name for the system companion device manager service.
@@ -4437,7 +4437,7 @@
         This service must be trusted, as it can be activated without explicit consent of the user.
         See android.service.ambientcontext.AmbientContextDetectionService.
    -->
-    <string name="config_defaultAmbientContextDetectionService" translatable="false"></string>
+    <string name="config_defaultAmbientContextDetectionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiAmbientContextDetectionService</string>
 
     <!-- The component names for the system's AmbientContextEvent detection services.
       These services must be trusted, as it can be activated without explicit consent of the user.
@@ -4468,7 +4468,7 @@
     <string translatable="false" name="config_wearableAmbientContextEventArrayExtraKey"></string>
 
     <!-- Component name that accepts ACTION_SEND intents for requesting ambient context consent. -->
-    <string translatable="false" name="config_defaultAmbientContextConsentComponent"></string>
+    <string translatable="false" name="config_defaultAmbientContextConsentComponent">com.google.android.as/com.google.android.apps.miphone.aiai.ambientcontext.ui.ConsentActivity</string>
 
     <!-- Intent extra key for the caller's package name while requesting ambient context consent.
      -->
@@ -4481,7 +4481,7 @@
          This service must be trusted, as the system binds to it and keeps it running.
          Example: "com.android.captions/.SystemCaptionsManagerService"
     -->
-    <string name="config_defaultSystemCaptionsManagerService" translatable="false"></string>
+    <string name="config_defaultSystemCaptionsManagerService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
 
     <!-- Indicates whether the system wide captions service should also support
          call captioning.
@@ -4501,7 +4501,7 @@
          disabled.
          Example: "com.android.contentcapture/.ContentcaptureService"
     -->
-    <string name="config_defaultContentCaptureService" translatable="false"></string>
+    <string name="config_defaultContentCaptureService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentCaptureService</string>
 
     <!-- The package name for the system's content protection service.
          This service must be trusted, as it can be activated without explicit consent of the user.
@@ -4526,7 +4526,13 @@
           Example: "com.android.intelligence/.CloudSearchService"
           config_defaultCloudSearchServices is for the multiple provider case.
     -->
-    <string-array name="config_defaultCloudSearchServices"></string-array>
+    <string-array name="config_defaultCloudSearchServices">
+    	<item>com.android.vending/com.google.android.finsky.cloudsearch.PlayCloudSearchService</item>
+        <item>com.android.chrome/com.google.android.apps.chrome.cloudsearch.ChromeCloudSearchService</item>
+        <item>com.chrome.canary/com.google.android.apps.chrome.cloudsearch.ChromeCloudSearchService</item>
+        <item>com.chrome.dev/com.google.android.apps.chrome.cloudsearch.ChromeCloudSearchService</item>
+        <item>com.chrome.beta/com.google.android.apps.chrome.cloudsearch.ChromeCloudSearchService</item>
+    </string-array>
 
     <!-- The package name for the system's translation service.
      This service must be trusted, as it can be activated without explicit consent of the user.
@@ -4534,13 +4540,13 @@
      disabled.
      Example: "com.android.translation/.TranslationService"
 -->
-    <string name="config_defaultTranslationService" translatable="false"></string>
+    <string name="config_defaultTranslationService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiTranslationService</string>
 
     <!-- The package name for the system's app prediction service.
          This service must be trusted, as it can be activated without explicit consent of the user.
          Example: "com.android.intelligence/.AppPredictionService"
     -->
-    <string name="config_defaultAppPredictionService" translatable="false"></string>
+    <string name="config_defaultAppPredictionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiPredictionService</string>
 
     <!-- The package name for the system's content suggestions service.
          Provides suggestions for text and image selection regions in snapshots of apps and should
@@ -4551,7 +4557,7 @@
          disabled.
          Example: "com.android.contentsuggestions/.ContentSuggestionsService"
     -->
-    <string name="config_defaultContentSuggestionsService" translatable="false"></string>
+    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
 
     <!-- The package name for the system's search ui service.
      This service returns search results when provided with an input string.
@@ -4612,9 +4618,9 @@
          This service must be trusted, as it can be activated without explicit consent of the user.
          Example: "com.android.speech/.RecognitionService"
     -->
-    <string name="config_defaultOnDeviceSpeechRecognitionService" translatable="false"></string>
+    <string name="config_defaultOnDeviceSpeechRecognitionService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiSpeechRecognitionService</string>
 
-    <string name="config_defaultMusicRecognitionService" translatable="false"></string>
+    <string name="config_defaultMusicRecognitionService" translatable="false">com.google.android.googlequicksearchbox/com.google.android.apps.search.soundsearch.service.SoundSearchService</string>
 
     <!-- The package name for the system's wallpaper effects generation service.
     This service returns wallpaper effects results.
@@ -4718,9 +4724,9 @@
     <integer translatable="false" name="config_storageManagerDaystoRetainDefault">90</integer>
 
     <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
-    <string name="config_headlineFontFamily" translatable="false"></string>
+    <string name="config_headlineFontFamily" translatable="false">google-sans</string>
     <!-- Allows setting custom fontFeatureSettings on specific text. -->
-    <string name="config_headlineFontFeatureSettings" translatable="false"></string>
+    <string name="config_headlineFontFeatureSettings" translatable="false">ss03</string>
 
     <!-- An array of packages that need to be treated as type system in battery settings -->
     <string-array translatable="false" name="config_batteryPackageTypeSystem">
@@ -4803,14 +4809,14 @@
     <!-- Controls whether system buttons use all caps for text -->
     <bool name="config_buttonTextAllCaps">true</bool>
     <!-- Name of the font family used for system surfaces where the font should use medium weight -->
-    <string name="config_headlineFontFamilyMedium" translateable="false">@string/font_family_button_material</string>
+    <string name="config_headlineFontFamilyMedium" translateable="false">google-sans-medium</string>
     <!-- Name of a font family to use for body text. -->
-    <string name="config_bodyFontFamily" translatable="false">sans-serif</string>
+    <string name="config_bodyFontFamily" translatable="false">google-sans-text</string>
     <!-- Name of a font family to use for medium body text. -->
-    <string name="config_bodyFontFamilyMedium" translatable="false">sans-serif-medium</string>
+    <string name="config_bodyFontFamilyMedium" translatable="false">google-sans-text-medium</string>
 
     <!-- Name of the font family to use in the default lockscreen clock -->
-    <string name="config_clockFontFamily" translatable="false">monospace</string>
+    <string name="config_clockFontFamily" translatable="false">google-sans-clock</string>
 
     <!-- Size of icon shown beside a preference locked by admin -->
     <dimen name="config_restrictedIconSize">@dimen/restricted_icon_size_material</dimen>
@@ -4818,7 +4824,7 @@
     <string translatable="false" name="config_batterySaverDeviceSpecificConfig"></string>
 
     <!-- Component name that should be granted Notification Assistant access -->
-    <string name="config_defaultAssistantAccessComponent" translatable="false">android.ext.services/android.ext.services.notification.Assistant</string>
+    <string name="config_defaultAssistantAccessComponent" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.common.notification.service.AiAiNotificationAssistantService</string>
 
     <bool name="config_keepRestrictedProfilesInBackground">true</bool>
 
@@ -5483,8 +5489,13 @@
 
     <!-- Names of packages that should not be suspended when personal use is blocked by policy. -->
     <string-array name="config_packagesExemptFromSuspension" translatable="false">
-        <!-- Add packages here, example: -->
-        <!-- <item>com.android.settings</item> -->
+        <item>com.google.android.apps.wellbeing</item>
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
+        <item>com.android.systemui</item>
+        <item>com.android.settings</item>
+        <item>com.google.android.apps.pixelmigrate</item>
+        <item>com.google.android.apps.restore</item>
     </string-array>
 
 
@@ -5843,7 +5854,7 @@
     <!-- Chooser image editing activity.  Must handle ACTION_EDIT image/png intents.
          If omitted, image editing will not be offered via Chooser.
          This name is in the ComponentName flattened format (package/class) [DO NOT TRANSLATE]  -->
-    <string name="config_systemImageEditor" translatable="false"></string>
+    <string name="config_systemImageEditor" translatable="false">com.google.android.markup/com.google.android.markup.AnnotateActivity</string>
 
     <!-- Whether to force WindowOrientationListener to keep listening to its sensor, even when
          dreaming. This allows the AoD to rotate on devices without a wake device_orientation
@@ -6110,9 +6121,9 @@
     <string name="config_systemCompanionDeviceProvider" translatable="false">com.google.android.gms</string>
 
     <!-- Whether this device is supporting the software microphone toggle -->
-    <bool name="config_supportsMicToggle">false</bool>
+    <bool name="config_supportsMicToggle">true</bool>
     <!-- Whether this device is supporting the camera toggle -->
-    <bool name="config_supportsCamToggle">false</bool>
+    <bool name="config_supportsCamToggle">true</bool>
     <!-- Whether this device is supporting the hardware microphone toggle -->
     <bool name="config_supportsHardwareMicToggle">false</bool>
     <!-- Whether this device is supporting the hardware camera toggle -->
