@@ -2307,7 +2307,7 @@
     <!-- The name of the package that will hold the system financed device controller role. -->
     <string name="config_systemFinancedDeviceController" translatable="false">com.android.devicelockcontroller</string>
     <!-- The name of the package that will hold the call streaming role. -->
-    <string name="config_systemCallStreaming" translatable="false"></string>
+    <string name="config_systemCallStreaming" translatable="false">com.google.android.gms</string>
 
     <!-- The component name of the wear service class that will be started by the system server. -->
     <string name="config_wearServiceComponent" translatable="false"></string>
@@ -3572,7 +3572,7 @@
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
-    <string name="config_deviceConfiguratorPackageName" translatable="false"></string>
+    <string name="config_deviceConfiguratorPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- Flag indicating apps will skip sending hold request before merge. In this case
         IMS service implementation will do both.i.e.hold followed by merge. -->
@@ -6590,7 +6590,7 @@
     </string-array>
 
     <!-- Package name of Health Connect data migrator application.  -->
-    <string name="config_healthConnectMigratorPackageName"></string>
+    <string name="config_healthConnectMigratorPackageName">com.google.android.apps.healthdata</string>
 
     <!-- Whether system apps should be scanned in the stopped state during initial boot.
         Packages can be added by OEMs in an allowlist, to prevent them from being scanned as
